@@ -165,14 +165,26 @@ const CreatePoint = () => {
       data.append("token", String(tokenSelected))
       data.append("items", items.join(","))
 
+      Alert.alert(
+        "Cadastro em andamento...."
+        )
+
       await api.post("/points", data)
+            .then((response) => {
+                openModal()
 
-      openModal()
+                setTimeout(() => {
+                    closeModal()
+                    handleReload()
+                }, 2000)
+            })
+            .catch(function(error) {
+                console.log('There has been a problem with your fetch operation: ' + error.message);
+                Alert.alert(
+                    "Desculpe, ocorreu um erro ao tentar cadastrar este ponto. Por favor, envie o formulário de cadastro novamente!"
+                )
+            })
 
-      setTimeout(() => {
-        closeModal()
-        handleReload()
-      }, 2000)
     }
   }
 
