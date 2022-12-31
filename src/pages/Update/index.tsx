@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from "react"
 import styles from "./styles"
 import api from "../../services/api"
-import { View, Text, TouchableOpacity, Alert, SafeAreaView } from "react-native"
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Alert,
+  SafeAreaView,
+  ScrollView,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native"
 import { Feather as Icon } from "@expo/vector-icons"
 import { useNavigation, useRoute } from "@react-navigation/native"
 import { TextInput } from "react-native-gesture-handler"
@@ -151,52 +160,56 @@ const Update = () => {
 
         <Text style={styles.title}>Atualizar ponto de coleta</Text>
 
-        <View>
-          <TextInput
-            placeholder="Nome"
-            style={styles.textInput}
-            onChangeText={(text) => setNome(text)}
-          />
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{ paddingVertical: 10 }}
+        >
+          <View style={{ flex: 1, marginBottom: 40 }}>
+            <TextInput
+              placeholder="Nome"
+              style={styles.textInput}
+              onChangeText={(text) => setNome(text)}
+            />
 
-          <TextInput
-            placeholder="E-mail"
-            style={styles.textInput}
-            onChangeText={(text) => setEmail(text)}
-          />
+            <TextInput
+              placeholder="E-mail"
+              style={styles.textInput}
+              onChangeText={(text) => setEmail(text)}
+            />
 
-          <TextInput
-            placeholder="WhatsApp"
-            style={styles.textInput}
-            onChangeText={(text) => setWhatsApp(text)}
-          />
+            <TextInput
+              placeholder="WhatsApp"
+              style={styles.textInput}
+              onChangeText={(text) => setWhatsApp(text)}
+            />
 
-          <TextInput
-            placeholder="Rua"
-            style={styles.textInput}
-            onChangeText={(text) => setRua(text)}
-          />
+            <TextInput
+              placeholder="Rua"
+              style={styles.textInput}
+              onChangeText={(text) => setRua(text)}
+            />
 
-          <TextInput
-            placeholder="Bairro"
-            style={styles.textInput}
-            onChangeText={(text) => setBairro(text)}
-          />
+            <TextInput
+              placeholder="Bairro"
+              style={styles.textInput}
+              onChangeText={(text) => setBairro(text)}
+            />
 
-          <TextInput
-            placeholder="Complemento"
-            style={styles.textInput}
-            onChangeText={(text) => setComplemento(text)}
-          />
-        </View>
+            <TextInput
+              placeholder="Complemento"
+              style={styles.textInput}
+              onChangeText={(text) => setComplemento(text)}
+            />
 
-        <RectButton style={styles.button} onPress={handleUpdate}>
-          <Text style={styles.buttonText}>Atualizar</Text>
-        </RectButton>
+            <RectButton style={styles.button} onPress={handleUpdate}>
+              <Text style={styles.buttonText}>Atualizar</Text>
+            </RectButton>
 
-        <RectButton style={styles.buttonDelete} onPress={handleDelete}>
-          <Text style={styles.buttonTextDelete}>Excluir</Text>
-        </RectButton>
-        {/* </ScrollView> */}
+            <RectButton style={styles.buttonDelete} onPress={handleDelete}>
+              <Text style={styles.buttonTextDelete}>Excluir</Text>
+            </RectButton>
+          </View>
+        </ScrollView>
       </View>
     </SafeAreaView>
   )

@@ -12,7 +12,7 @@ export default StyleSheet.create({
   },
 
   title: {
-    fontSize: 26,
+    fontSize: 24,
     fontFamily: "Ubuntu_700Bold",
     marginTop: 30,
     marginBottom: 15,
@@ -28,9 +28,9 @@ export default StyleSheet.create({
 
   textInput: {
     width: "100%",
-    height: 55,
+    height: "15%",
     borderRadius: 8,
-    fontSize: 18,
+    fontSize: 16,
     fontFamily: "Roboto_400Regular",
     borderColor: "#092b5a",
     borderWidth: 2,
