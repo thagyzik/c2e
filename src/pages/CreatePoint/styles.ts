@@ -22,7 +22,7 @@ export default StyleSheet.create({
 
   description: {
     color: "#092b5a",
-    fontSize: 17,
+    fontSize: 16,
     fontFamily: "Roboto_400Regular",
     marginBottom: 4,
   },
@@ -68,13 +68,15 @@ export default StyleSheet.create({
     backgroundColor: "#fff",
     borderWidth: 2,
     borderColor: "#eee",
-    height: 110,
-    width: 120,
+    height: 100,
+    width: 110,
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "center",
-    marginRight: 10,
+    marginRight: 8,
     marginTop: 7,
+    flex: 1,
+    flexDirection: "column",
   },
 
   selectedItem: {
@@ -115,7 +117,6 @@ export default StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
     alignItems: "center",
-    marginTop: 10,
   },
 
   buttonIcon: {

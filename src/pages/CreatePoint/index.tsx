@@ -165,26 +165,27 @@ const CreatePoint = () => {
       data.append("token", String(tokenSelected))
       data.append("items", items.join(","))
 
-      Alert.alert(
-        "Cadastro em andamento...."
-        )
+      Alert.alert("Cadastro em andamento....")
 
-      await api.post("/points", data)
-            .then((response) => {
-                openModal()
+      await api
+        .post("/points", data)
+        .then((response) => {
+          openModal()
 
-                setTimeout(() => {
-                    closeModal()
-                    handleReload()
-                }, 2000)
-            })
-            .catch(function(error) {
-                console.log('There has been a problem with your fetch operation: ' + error.message);
-                Alert.alert(
-                    "Desculpe, ocorreu um erro ao tentar cadastrar este ponto. Por favor, envie o formulário de cadastro novamente!"
-                )
-            })
-
+          setTimeout(() => {
+            closeModal()
+            handleReload()
+          }, 2000)
+        })
+        .catch(function (error) {
+          console.log(
+            "There has been a problem with your fetch operation: " +
+              error.message
+          )
+          Alert.alert(
+            "Desculpe, ocorreu um erro ao tentar cadastrar este ponto. Por favor, envie o formulário de cadastro novamente!"
+          )
+        })
     }
   }
 
@@ -271,7 +272,9 @@ const CreatePoint = () => {
           </ScrollView>
         </ScrollView>
 
-        <Text style={styles.description}>Aguarde o mapa ser carregado e selecione o endereço no mapa.</Text>
+        <Text style={styles.description}>
+          Aguarde o mapa ser carregado e selecione o endereço no mapa.
+        </Text>
 
         <View style={styles.mapContainer}>
           {initialPosition[0] !== 0 && (
@@ -316,7 +319,7 @@ const CreatePoint = () => {
             onPress={() => handleSelectedItem(1)}
             activeOpacity={0.6}
           >
-            <Lampadas width="60" height="60" />
+            <Lampadas width="50" height="50" />
             <Text style={styles.itemTitle}>Lâmpadas</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -328,7 +331,7 @@ const CreatePoint = () => {
             onPress={() => handleSelectedItem(2)}
             activeOpacity={0.6}
           >
-            <Baterias width="60" height="60" />
+            <Baterias width="50" height="50" />
             <Text style={styles.itemTitle}>Pilhas/Baterias</Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -340,15 +343,13 @@ const CreatePoint = () => {
             onPress={() => handleSelectedItem(3)}
             activeOpacity={0.6}
           >
-            <Eletronicos width="60" height="60" />
+            <Eletronicos width="50" height="50" />
             <Text style={styles.itemTitle}>Eletrônicos</Text>
           </TouchableOpacity>
         </ScrollView>
-        <ScrollView>
-          <RectButton style={styles.button} onPress={handleSubmit}>
-            <Text style={styles.buttonText}>Cadastrar</Text>
-          </RectButton>
-        </ScrollView>
+        <RectButton style={styles.button} onPress={handleSubmit}>
+          <Text style={styles.buttonText}>Cadastrar</Text>
+        </RectButton>
       </View>
     </SafeAreaView>
   )
