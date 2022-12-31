@@ -12,14 +12,6 @@ export default StyleSheet.create({
     color: "#092b5a",
   },
 
-  pointImage: {
-    width: "100%",
-    height: 160,
-    resizeMode: "cover",
-    borderRadius: 10,
-    marginTop: 32,
-  },
-
   pointName: {
     color: "#322153",
     fontSize: 28,
@@ -45,6 +37,7 @@ export default StyleSheet.create({
 
   address: {
     marginTop: 32,
+    flex: 1,
   },
 
   addressTitle: {
@@ -53,27 +46,17 @@ export default StyleSheet.create({
     fontSize: 22,
   },
 
-  scrollView: {
-    flexDirection: "column",
-    flex: 1,
-    height: "100%",
-  },
-
   addressContent: {
     flexDirection: "column",
     marginTop: 8,
   },
+
   adressContentText: {
     color: "#6C6C80",
     fontFamily: "Roboto_500Medium",
     fontSize: 18,
     marginBottom: 5,
     marginTop: 8,
-  },
-
-  viewAdressInfo: {
-    height: 200,
-    flexDirection: "column",
   },
 
   footer: {
@@ -85,13 +68,6 @@ export default StyleSheet.create({
     justifyContent: "space-between",
   },
 
-  gerenciar: {
-    borderColor: "#999",
-    paddingVertical: 20,
-    paddingHorizontal: 30,
-    flexDirection: "row",
-  },
-
   buttonGerenciar: {
     backgroundColor: "#092b5a",
     borderRadius: 8,
@@ -100,7 +76,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
-    flex: 1,
+    marginTop: 50,
   },
 
   button: {

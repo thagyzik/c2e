@@ -82,10 +82,6 @@ const Detail = () => {
           <Icon style={styles.iconLogout} name="arrow-left" size={22} />
         </TouchableOpacity>
 
-        <Image
-          style={styles.pointImage}
-          source={require("../../assets/empresa.png")}
-        />
         <Text style={styles.pointName}>{data.point.name}</Text>
         <Text style={styles.itemsTitle}>Itens Coletados:</Text>
         <Text style={styles.pointItems}>
@@ -94,58 +90,45 @@ const Detail = () => {
 
         <View style={styles.address}>
           <Text style={styles.addressTitle}>Endereço:</Text>
-          <View style={styles.viewAdressInfo}>
-            <ScrollView
-              alwaysBounceVertical={true}
-              showsVerticalScrollIndicator={true}
-              contentContainerStyle={{ paddingHorizontal: 1 }}
-              style={styles.scrollView}
-            >
-              <View style={styles.addressContent}>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  Rua: {data.point.street}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  Bairro: {data.point.neighborhood}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  Complemento: {data.point.complement}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  Cidade: {data.point.city}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  Estado: {data.point.uf}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  WhatsApp: {data.point.whatsapp}
-                </Text>
-                <Text style={styles.adressContentText}>
-                  {" "}
-                  E-mail: {data.point.email}
-                </Text>
-              </View>
-            </ScrollView>
+          <View style={styles.addressContent}>
+            <Text style={styles.adressContentText}>
+              {" "}
+              Rua: {data.point.street}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              Bairro: {data.point.neighborhood}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              Complemento: {data.point.complement}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              Cidade: {data.point.city}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              Estado: {data.point.uf}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              WhatsApp: {data.point.whatsapp}
+            </Text>
+            <Text style={styles.adressContentText}>
+              {" "}
+              E-mail: {data.point.email}
+            </Text>
           </View>
+          <RectButton
+            style={styles.buttonGerenciar}
+            onPress={() => handleGerenciar(routeParams.point_id)}
+          >
+            <FontAwesome5 name="tools" size={20} color="#FFF" />
+            <Text style={styles.buttonTextAction}>Ações</Text>
+          </RectButton>
         </View>
       </View>
-
-      <View style={styles.gerenciar}>
-        <RectButton
-          style={styles.buttonGerenciar}
-          onPress={() => handleGerenciar(routeParams.point_id)}
-        >
-          <FontAwesome5 name="tools" size={20} color="#FFF" />
-          <Text style={styles.buttonTextAction}>Ações</Text>
-        </RectButton>
-      </View>
-
       <View style={styles.footer}>
         <RectButton style={styles.button} onPress={handleWhatsapp}>
           <FontAwesome name="whatsapp" size={20} color="#FFF" />
