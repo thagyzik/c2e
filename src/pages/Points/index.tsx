@@ -107,7 +107,7 @@ const Points = () => {
 
         <Text style={styles.title}>Seja Bem Vindo.</Text>
         <Text style={styles.description}>
-          Encontre no mapa um ponto de coleta.
+          Aguarde o mapa ser carregado e encontre no mapa um ponto de coleta.
         </Text>
 
         <View style={styles.mapContainer}>
@@ -145,6 +145,10 @@ const Points = () => {
           )}
         </View>
       </View>
+
+      <Text style={styles.descriptionItem}>
+          Selecione o tipo de material que gostaria de doar.
+      </Text>
 
       <View style={styles.itemsContainer}>
         <ScrollView

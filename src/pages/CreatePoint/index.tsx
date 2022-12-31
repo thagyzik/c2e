@@ -271,7 +271,7 @@ const CreatePoint = () => {
           </ScrollView>
         </ScrollView>
 
-        <Text style={styles.description}>Selecione o endereço no mapa.</Text>
+        <Text style={styles.description}>Aguarde o mapa ser carregado e selecione o endereço no mapa.</Text>
 
         <View style={styles.mapContainer}>
           {initialPosition[0] !== 0 && (

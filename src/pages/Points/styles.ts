@@ -29,6 +29,15 @@ export default StyleSheet.create({
     marginBottom: 4,
   },
 
+  descriptionItem: {
+    color: "#6C6C80",
+    fontSize: 15,
+    marginTop: 10,
+    fontFamily: "Roboto_400Regular",
+    textAlign: "center",
+    marginBottom: 4,
+  },
+
   mapContainer: {
     flex: 10,
     width: "100%",
