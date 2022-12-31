@@ -94,12 +94,12 @@ const Detail = () => {
 
         <View style={styles.address}>
           <Text style={styles.addressTitle}>Endereço:</Text>
-          <View style={styles.testeview}>
+          <View style={styles.viewAdressInfo}>
             <ScrollView
               alwaysBounceVertical={true}
               showsVerticalScrollIndicator={true}
               contentContainerStyle={{ paddingHorizontal: 1 }}
-              style={styles.teste}
+              style={styles.scrollView}
             >
               <View style={styles.addressContent}>
                 <Text style={styles.adressContentText}>

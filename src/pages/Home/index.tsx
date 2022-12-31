@@ -85,10 +85,7 @@ const Home = () => {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <View style={styles.container}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          style={{ marginBottom: 30, flex: 1 }}
-        >
+        <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.main}>
             <Image
               style={styles.logoImg}

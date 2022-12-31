@@ -52,7 +52,8 @@ export default StyleSheet.create({
     fontFamily: "Roboto_500Medium",
     fontSize: 22,
   },
-  teste: {
+
+  scrollView: {
     flexDirection: "column",
     flex: 1,
     height: "100%",
@@ -70,8 +71,9 @@ export default StyleSheet.create({
     marginTop: 8,
   },
 
-  testeview: {
-    height: "55%",
+  viewAdressInfo: {
+    height: 200,
+    flexDirection: "column",
   },
 
   footer: {
@@ -88,7 +90,6 @@ export default StyleSheet.create({
     paddingVertical: 20,
     paddingHorizontal: 30,
     flexDirection: "row",
-    justifyContent: "space-between",
   },
 
   buttonGerenciar: {
@@ -99,6 +100,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: "100%",
+    flex: 1,
   },
 
   button: {

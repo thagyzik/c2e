@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native"
 export const pickerSelectStyles = StyleSheet.create({
   inputIOS: {
-    height: 60,
+    height: 55,
     fontSize: 18,
     borderWidth: 2,
     borderColor: "gray",
@@ -59,8 +59,8 @@ export default StyleSheet.create({
   },
 
   logoImg: {
-    width: 200,
-    height: 150,
+    width: 160,
+    height: 100,
   },
 
   footer: {},
@@ -69,7 +69,7 @@ export default StyleSheet.create({
 
   button: {
     backgroundColor: "#092b5a",
-    height: 60,
+    height: 55,
     flexDirection: "row",
     borderRadius: 10,
     overflow: "hidden",
@@ -83,6 +83,8 @@ export default StyleSheet.create({
     flexDirection: "row",
     overflow: "hidden",
     alignItems: "center",
+    marginBottom: 30,
+    marginTop: "10%",
   },
 
   buttonText: {
@@ -105,13 +107,12 @@ export default StyleSheet.create({
     backgroundColor: "transparent",
     borderColor: "#092b5a",
     borderWidth: 2,
-    height: 60,
+    height: 55,
     flexDirection: "row",
     borderRadius: 10,
     overflow: "hidden",
     alignItems: "center",
-    marginTop: "20%",
-    marginBottom: "10%",
+    marginTop: "12%",
   },
   buttonTextSignUp: {
     flex: 1,

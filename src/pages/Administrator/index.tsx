@@ -29,8 +29,8 @@ const Administrator = () => {
         <View style={styles.main}>
           <View>
             <Text style={styles.title}>
-              Contate o administrador do 2E APP em caso de dúvidas, melhorias ou
-              sugestões.
+              Contate o administrador do C2E APP em caso de dúvidas, melhorias
+              ou sugestões.
             </Text>
             <Text style={styles.description}>E-mail: c2eapp@gmail.com</Text>
           </View>
