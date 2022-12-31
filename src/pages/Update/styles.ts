@@ -28,7 +28,7 @@ export default StyleSheet.create({
 
   textInput: {
     width: "100%",
-    height: "15%",
+    height: 55,
     borderRadius: 8,
     fontSize: 16,
     fontFamily: "Roboto_400Regular",
@@ -41,7 +41,7 @@ export default StyleSheet.create({
 
   button: {
     backgroundColor: "#092b5a",
-    height: 60,
+    height: 55,
     flexDirection: "row",
     borderRadius: 10,
     overflow: "hidden",
@@ -51,7 +51,7 @@ export default StyleSheet.create({
 
   buttonDelete: {
     backgroundColor: "#092b5a",
-    height: 60,
+    height: 55,
     flexDirection: "row",
     borderRadius: 10,
     overflow: "hidden",
@@ -65,7 +65,7 @@ export default StyleSheet.create({
     textAlign: "center",
     color: "#FFF",
     fontFamily: "Roboto_500Medium",
-    fontSize: 20,
+    fontSize: 18,
   },
 
   buttonText: {
@@ -74,7 +74,7 @@ export default StyleSheet.create({
     textAlign: "center",
     color: "#FFF",
     fontFamily: "Roboto_500Medium",
-    fontSize: 20,
+    fontSize: 18,
   },
 
   footer: {},

@@ -162,53 +162,51 @@ const Update = () => {
 
         <ScrollView
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingVertical: 10 }}
+          style={{ marginBottom: 50 }}
         >
-          <View style={{ flex: 1, marginBottom: 40 }}>
-            <TextInput
-              placeholder="Nome"
-              style={styles.textInput}
-              onChangeText={(text) => setNome(text)}
-            />
+          <TextInput
+            placeholder="Nome"
+            style={styles.textInput}
+            onChangeText={(text) => setNome(text)}
+          />
 
-            <TextInput
-              placeholder="E-mail"
-              style={styles.textInput}
-              onChangeText={(text) => setEmail(text)}
-            />
+          <TextInput
+            placeholder="E-mail"
+            style={styles.textInput}
+            onChangeText={(text) => setEmail(text)}
+          />
 
-            <TextInput
-              placeholder="WhatsApp"
-              style={styles.textInput}
-              onChangeText={(text) => setWhatsApp(text)}
-            />
+          <TextInput
+            placeholder="WhatsApp"
+            style={styles.textInput}
+            onChangeText={(text) => setWhatsApp(text)}
+          />
 
-            <TextInput
-              placeholder="Rua"
-              style={styles.textInput}
-              onChangeText={(text) => setRua(text)}
-            />
+          <TextInput
+            placeholder="Rua"
+            style={styles.textInput}
+            onChangeText={(text) => setRua(text)}
+          />
 
-            <TextInput
-              placeholder="Bairro"
-              style={styles.textInput}
-              onChangeText={(text) => setBairro(text)}
-            />
+          <TextInput
+            placeholder="Bairro"
+            style={styles.textInput}
+            onChangeText={(text) => setBairro(text)}
+          />
 
-            <TextInput
-              placeholder="Complemento"
-              style={styles.textInput}
-              onChangeText={(text) => setComplemento(text)}
-            />
+          <TextInput
+            placeholder="Complemento"
+            style={styles.textInput}
+            onChangeText={(text) => setComplemento(text)}
+          />
 
-            <RectButton style={styles.button} onPress={handleUpdate}>
-              <Text style={styles.buttonText}>Atualizar</Text>
-            </RectButton>
+          <RectButton style={styles.button} onPress={handleUpdate}>
+            <Text style={styles.buttonText}>Atualizar</Text>
+          </RectButton>
 
-            <RectButton style={styles.buttonDelete} onPress={handleDelete}>
-              <Text style={styles.buttonTextDelete}>Excluir</Text>
-            </RectButton>
-          </View>
+          <RectButton style={styles.buttonDelete} onPress={handleDelete}>
+            <Text style={styles.buttonTextDelete}>Excluir</Text>
+          </RectButton>
         </ScrollView>
       </View>
     </SafeAreaView>
