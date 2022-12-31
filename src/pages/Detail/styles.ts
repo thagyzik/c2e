@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
   pointImage: {
     width: "100%",
-    height: 150,
+    height: 160,
     resizeMode: "cover",
     borderRadius: 10,
     marginTop: 32,
@@ -54,6 +54,8 @@ export default StyleSheet.create({
   },
   teste: {
     flexDirection: "column",
+    flex: 1,
+    height: "100%",
   },
 
   addressContent: {
@@ -65,6 +67,11 @@ export default StyleSheet.create({
     fontFamily: "Roboto_500Medium",
     fontSize: 18,
     marginBottom: 5,
+    marginTop: 8,
+  },
+
+  testeview: {
+    height: "55%",
   },
 
   footer: {
