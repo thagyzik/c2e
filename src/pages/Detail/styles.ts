@@ -37,13 +37,18 @@ export default StyleSheet.create({
 
   address: {
     marginTop: 32,
-    flex: 1,
   },
 
   addressTitle: {
     color: "#322153",
     fontFamily: "Roboto_500Medium",
     fontSize: 22,
+  },
+
+  scrollView: {
+    flexDirection: "column",
+    flex: 1,
+    height: "100%",
   },
 
   addressContent: {
@@ -59,6 +64,11 @@ export default StyleSheet.create({
     marginTop: 8,
   },
 
+  viewAdressInfo: {
+    height: "60%",
+    flexDirection: "column",
+  },
+
   footer: {
     borderTopWidth: StyleSheet.hairlineWidth,
     borderColor: "#999",
@@ -68,6 +78,13 @@ export default StyleSheet.create({
     justifyContent: "space-between",
   },
 
+  gerenciar: {
+    borderColor: "#999",
+    paddingVertical: 20,
+    paddingHorizontal: 30,
+    flexDirection: "row",
+  },
+
   buttonGerenciar: {
     backgroundColor: "#092b5a",
     borderRadius: 8,
@@ -75,8 +92,6 @@ export default StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%",
-    marginTop: 50,
   },
 
   button: {

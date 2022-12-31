@@ -90,35 +90,44 @@ const Detail = () => {
 
         <View style={styles.address}>
           <Text style={styles.addressTitle}>Endereço:</Text>
-          <View style={styles.addressContent}>
-            <Text style={styles.adressContentText}>
-              {" "}
-              Rua: {data.point.street}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              Bairro: {data.point.neighborhood}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              Complemento: {data.point.complement}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              Cidade: {data.point.city}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              Estado: {data.point.uf}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              WhatsApp: {data.point.whatsapp}
-            </Text>
-            <Text style={styles.adressContentText}>
-              {" "}
-              E-mail: {data.point.email}
-            </Text>
+          <View style={styles.viewAdressInfo}>
+            <ScrollView
+              alwaysBounceVertical={true}
+              showsVerticalScrollIndicator={true}
+              contentContainerStyle={{ paddingHorizontal: 1 }}
+              style={styles.scrollView}
+            >
+              <View style={styles.addressContent}>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  Rua: {data.point.street}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  Bairro: {data.point.neighborhood}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  Complemento: {data.point.complement}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  Cidade: {data.point.city}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  Estado: {data.point.uf}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  WhatsApp: {data.point.whatsapp}
+                </Text>
+                <Text style={styles.adressContentText}>
+                  {" "}
+                  E-mail: {data.point.email}
+                </Text>
+              </View>
+            </ScrollView>
           </View>
           <RectButton
             style={styles.buttonGerenciar}
@@ -129,6 +138,9 @@ const Detail = () => {
           </RectButton>
         </View>
       </View>
+
+      {/* <View style={styles.gerenciar}></View> */}
+
       <View style={styles.footer}>
         <RectButton style={styles.button} onPress={handleWhatsapp}>
           <FontAwesome name="whatsapp" size={20} color="#FFF" />
