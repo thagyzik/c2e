@@ -27,6 +27,12 @@ export default StyleSheet.create({
     padding: 32,
   },
 
+  selectView: {
+    flexDirection: "column",
+    flex: 1,
+    height: "100%",
+  },
+
   main: {
     flex: 1,
     alignItems: "center",
@@ -39,16 +45,19 @@ export default StyleSheet.create({
     fontFamily: "Ubuntu_700Bold",
     textAlign: "center",
     marginTop: 30,
+    flex: 1,
   },
 
   description: {
     color: "#6C6C80",
     fontSize: 16,
-    marginTop: 30,
+    marginTop: 20,
     fontFamily: "Roboto_400Regular",
     textAlign: "center",
     lineHeight: 24,
+    marginBottom: 40,
   },
+
   logoImg: {
     width: 200,
     height: 150,
@@ -58,24 +67,6 @@ export default StyleSheet.create({
 
   select: {},
 
-  input: {
-    height: 60,
-    backgroundColor: "#FFF",
-    borderRadius: 10,
-    marginBottom: 8,
-    paddingHorizontal: 24,
-    fontSize: 16,
-  },
-
-  teste: {
-    flexDirection: "row",
-    width: "80%",
-    backgroundColor: "#FFF",
-    borderRadius: 10,
-    color: "#092b5a",
-    padding: 20,
-  },
-
   button: {
     backgroundColor: "#092b5a",
     height: 60,
@@ -83,6 +74,7 @@ export default StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
     alignItems: "center",
+    marginTop: 5,
   },
 
   buttonLink: {
@@ -91,7 +83,6 @@ export default StyleSheet.create({
     flexDirection: "row",
     overflow: "hidden",
     alignItems: "center",
-    marginTop: 20,
   },
 
   buttonText: {
@@ -119,7 +110,8 @@ export default StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
     alignItems: "center",
-    marginTop: 50,
+    marginTop: "20%",
+    marginBottom: "10%",
   },
   buttonTextSignUp: {
     flex: 1,
@@ -128,5 +120,9 @@ export default StyleSheet.create({
     color: "#092b5a",
     fontFamily: "Roboto_500Medium",
     fontSize: 18,
+  },
+
+  teste: {
+    flexDirection: "column",
   },
 })

@@ -89,56 +89,59 @@ const Home = () => {
             style={styles.logoImg}
             source={require("../../assets/logo-projeto.png")}
           />
-          <View>
-            <Text style={styles.title}>
-              Seu marketplace de coleta de resíduos eletrônicos
-            </Text>
+          <View style={styles.teste}>
             <Text style={styles.description}>
               Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente
             </Text>
+
+            <View style={styles.selectView}>
+              <RNPickerSelect
+                placeholder={{
+                  label: "Selecione uma UF",
+                  value: null,
+                  color: "#092b5a",
+                }}
+                useNativeAndroidPickerStyle={false}
+                style={pickerSelectStyles}
+                onValueChange={(uf) => setSelectedUf(uf)}
+                items={uf.map((uf) => ({ label: uf, value: uf }))}
+              />
+              <RNPickerSelect
+                placeholder={{
+                  label: "Selecione uma Cidade",
+                  value: null,
+                  color: "#092b5a",
+                }}
+                useNativeAndroidPickerStyle={false}
+                style={pickerSelectStyles}
+                onValueChange={(city) => setSelectedCity(city)}
+                items={city.map((city) => ({ label: city, value: city }))}
+              />
+              <RectButton
+                style={styles.button}
+                onPress={handleNavigateToPoints}
+              >
+                <Text style={styles.buttonText}>Buscar Ponto</Text>
+              </RectButton>
+
+              <RectButton
+                style={styles.buttonSignUp}
+                onPress={handleNavigateToCreatePoint}
+              >
+                <Text style={styles.buttonTextSignUp}>Cadastrar Ponto</Text>
+              </RectButton>
+
+              <RectButton
+                style={styles.buttonLink}
+                onPress={() => navigation.navigate("Administrator")}
+              >
+                <Text style={styles.buttonTextLink}>
+                  Contatar Administrador
+                </Text>
+              </RectButton>
+            </View>
           </View>
         </View>
-        <View>
-          <RNPickerSelect
-            placeholder={{
-              label: "Selecione uma UF",
-              value: null,
-              color: "#092b5a",
-            }}
-            useNativeAndroidPickerStyle={false}
-            style={pickerSelectStyles}
-            onValueChange={(uf) => setSelectedUf(uf)}
-            items={uf.map((uf) => ({ label: uf, value: uf }))}
-          />
-          <RNPickerSelect
-            placeholder={{
-              label: "Selecione uma Cidade",
-              value: null,
-              color: "#092b5a",
-            }}
-            useNativeAndroidPickerStyle={false}
-            style={pickerSelectStyles}
-            onValueChange={(city) => setSelectedCity(city)}
-            items={city.map((city) => ({ label: city, value: city }))}
-          />
-        </View>
-        <RectButton style={styles.button} onPress={handleNavigateToPoints}>
-          <Text style={styles.buttonText}>Buscar Ponto</Text>
-        </RectButton>
-
-        <RectButton
-          style={styles.buttonSignUp}
-          onPress={handleNavigateToCreatePoint}
-        >
-          <Text style={styles.buttonTextSignUp}>Cadastrar Ponto</Text>
-        </RectButton>
-
-        <RectButton
-          style={styles.buttonLink}
-          onPress={() => navigation.navigate("Administrator")}
-        >
-          <Text style={styles.buttonTextLink}>Contatar Administrador</Text>
-        </RectButton>
       </View>
     </KeyboardAvoidingView>
   )
