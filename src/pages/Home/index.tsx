@@ -7,6 +7,7 @@ import {
   Alert,
   TextInput,
   Image,
+  ScrollView,
 } from "react-native"
 import { Feather as Icon } from "@expo/vector-icons"
 import axios from "axios"
@@ -84,64 +85,70 @@ const Home = () => {
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
       <View style={styles.container}>
-        <View style={styles.main}>
-          <Image
-            style={styles.logoImg}
-            source={require("../../assets/logo-projeto.png")}
-          />
-          <View style={styles.teste}>
-            <Text style={styles.description}>
-              Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente
-            </Text>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          style={{ marginBottom: 30, flex: 1 }}
+        >
+          <View style={styles.main}>
+            <Image
+              style={styles.logoImg}
+              source={require("../../assets/logo-projeto.png")}
+            />
+            <View style={styles.teste}>
+              <Text style={styles.description}>
+                Ajudamos pessoas a encontrarem pontos de coleta de forma
+                eficiente
+              </Text>
 
-            <View style={styles.selectView}>
-              <RNPickerSelect
-                placeholder={{
-                  label: "Selecione uma UF",
-                  value: null,
-                  color: "#092b5a",
-                }}
-                useNativeAndroidPickerStyle={false}
-                style={pickerSelectStyles}
-                onValueChange={(uf) => setSelectedUf(uf)}
-                items={uf.map((uf) => ({ label: uf, value: uf }))}
-              />
-              <RNPickerSelect
-                placeholder={{
-                  label: "Selecione uma Cidade",
-                  value: null,
-                  color: "#092b5a",
-                }}
-                useNativeAndroidPickerStyle={false}
-                style={pickerSelectStyles}
-                onValueChange={(city) => setSelectedCity(city)}
-                items={city.map((city) => ({ label: city, value: city }))}
-              />
-              <RectButton
-                style={styles.button}
-                onPress={handleNavigateToPoints}
-              >
-                <Text style={styles.buttonText}>Buscar Ponto</Text>
-              </RectButton>
+              <View style={styles.selectView}>
+                <RNPickerSelect
+                  placeholder={{
+                    label: "Selecione uma UF",
+                    value: null,
+                    color: "#092b5a",
+                  }}
+                  useNativeAndroidPickerStyle={false}
+                  style={pickerSelectStyles}
+                  onValueChange={(uf) => setSelectedUf(uf)}
+                  items={uf.map((uf) => ({ label: uf, value: uf }))}
+                />
+                <RNPickerSelect
+                  placeholder={{
+                    label: "Selecione uma Cidade",
+                    value: null,
+                    color: "#092b5a",
+                  }}
+                  useNativeAndroidPickerStyle={false}
+                  style={pickerSelectStyles}
+                  onValueChange={(city) => setSelectedCity(city)}
+                  items={city.map((city) => ({ label: city, value: city }))}
+                />
+                <RectButton
+                  style={styles.button}
+                  onPress={handleNavigateToPoints}
+                >
+                  <Text style={styles.buttonText}>Buscar Ponto</Text>
+                </RectButton>
 
-              <RectButton
-                style={styles.buttonSignUp}
-                onPress={handleNavigateToCreatePoint}
-              >
-                <Text style={styles.buttonTextSignUp}>Cadastrar Ponto</Text>
-              </RectButton>
+                <RectButton
+                  style={styles.buttonSignUp}
+                  onPress={handleNavigateToCreatePoint}
+                >
+                  <Text style={styles.buttonTextSignUp}>Cadastrar Ponto</Text>
+                </RectButton>
 
-              <RectButton
-                style={styles.buttonLink}
-                onPress={() => navigation.navigate("Administrator")}
-              >
-                <Text style={styles.buttonTextLink}>
-                  Contatar Administrador
-                </Text>
-              </RectButton>
+                <RectButton
+                  style={styles.buttonLink}
+                  onPress={() => navigation.navigate("Administrator")}
+                >
+                  <Text style={styles.buttonTextLink}>
+                    Contatar Administrador
+                  </Text>
+                </RectButton>
+              </View>
             </View>
           </View>
-        </View>
+        </ScrollView>
       </View>
     </KeyboardAvoidingView>
   )
