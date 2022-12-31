@@ -137,7 +137,7 @@ const Points = () => {
                       style={styles.mapMarkerImage}
                       source={require("../../assets/empresa.png")}
                     />
-                    <Text style={styles.itemTitle}>Ponto</Text>
+                    <Text style={styles.itemTitle}>{point.name.length >= 8 ? point.name.substring(0,7) + '...' : point.name}</Text>
                   </View>
                 </Marker>
               ))}
