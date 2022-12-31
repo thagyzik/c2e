@@ -25,11 +25,10 @@ export default StyleSheet.create({
     marginTop: 50,
     fontFamily: "Roboto_400Regular",
     textAlign: "center",
-    marginBottom: 40,
   },
   token: {
     color: "#092b5a",
-    fontSize: 30,
+    fontSize: 24,
     marginTop: 50,
     fontFamily: "Roboto_400Regular",
     textAlign: "center",
@@ -43,7 +42,6 @@ export default StyleSheet.create({
     borderRadius: 10,
     overflow: "hidden",
     alignItems: "center",
-    marginTop: 90,
   },
 
   buttonText: {
