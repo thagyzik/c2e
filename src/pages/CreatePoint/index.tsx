@@ -178,10 +178,6 @@ const CreatePoint = () => {
           }, 2000)
         })
         .catch(function (error) {
-          console.log("----------------------------");
-          console.log(JSON.stringify(error));
-          console.log("----------------------------");
-          console.log(data)
           console.log(
             "There has been a problem with your fetch operation: " +
               error.message
@@ -200,7 +196,7 @@ const CreatePoint = () => {
     setToken(numero_aleatorio)
 
     Alert.alert(
-      `Ponto criado com Sucesso!\n Importante: guarde o código de gerenciamento deste ponto:\n ${token}`
+      `Sucesso, ${token} é seu código de acesso\nSalve este código!`
     )
   }
 
@@ -284,7 +280,12 @@ const CreatePoint = () => {
             <MapView
               scrollEnabled={true}
               style={styles.map}
-              
+              initialRegion={{
+                latitude: initialPosition[0],
+                longitude: initialPosition[1],
+                latitudeDelta: 0.014,
+                longitudeDelta: 0.014,
+              }}
               onPress={(e) => handleSelectedLocation(e)}
             >
               <Marker
