@@ -178,6 +178,10 @@ const CreatePoint = () => {
           }, 2000)
         })
         .catch(function (error) {
+          console.log("----------------------------");
+          console.log(JSON.stringify(error));
+          console.log("----------------------------");
+          console.log(data)
           console.log(
             "There has been a problem with your fetch operation: " +
               error.message
@@ -277,17 +281,10 @@ const CreatePoint = () => {
         </Text>
 
         <View style={styles.mapContainer}>
-          {initialPosition[0] !== 0 && (
             <MapView
               scrollEnabled={true}
               style={styles.map}
-              loadingEnabled={initialPosition[0] === 0}
-              initialRegion={{
-                latitude: initialPosition[0],
-                longitude: initialPosition[1],
-                latitudeDelta: 0.014,
-                longitudeDelta: 0.014,
-              }}
+              
               onPress={(e) => handleSelectedLocation(e)}
             >
               <Marker
@@ -298,7 +295,7 @@ const CreatePoint = () => {
                 }}
               ></Marker>
             </MapView>
-          )}
+          
         </View>
 
         <Text style={styles.description}>

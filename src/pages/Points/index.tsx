@@ -13,7 +13,7 @@ import { useNavigation, useRoute } from "@react-navigation/native"
 import { Feather as Icon } from "@expo/vector-icons"
 import api from "../../services/api"
 import * as Location from "expo-location"
-import MapView, { Marker } from "react-native-maps"
+import MapView, { Marker } from 'react-native-maps'
 import Baterias from "../../assets/pilha.svg"
 import Eletronicos from "../../assets/eletronico.svg"
 import Lampadas from "../../assets/lampada.svg"
@@ -111,10 +111,8 @@ const Points = () => {
         </Text>
 
         <View style={styles.mapContainer}>
-          {initialPosition[0] !== 0 && (
             <MapView
               style={styles.map}
-              loadingEnabled={initialPosition[0] === 0}
               initialRegion={{
                 latitude: initialPosition[0],
                 longitude: initialPosition[1],
@@ -142,7 +140,6 @@ const Points = () => {
                 </Marker>
               ))}
             </MapView>
-          )}
         </View>
       </View>
 
