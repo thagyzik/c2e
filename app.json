@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "projetoTcc",
-    "slug": "projetoTcc",
-    "version": "1.0.0",
+    "name": "C2E Coleta",
+    "slug": "c2EColeta",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -21,6 +21,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.c2e.coleta",
+      "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
@@ -28,6 +30,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "32e8ce0a-b316-43fb-bd3e-978b844c6bd7"
+      }
     }
   }
 }
