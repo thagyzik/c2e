@@ -1,5 +1,4 @@
 import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from './pages/Home'
 import Points from './pages/Points'
@@ -13,7 +12,6 @@ const AppStack = createStackNavigator()
 
 const Routes = () => {
     return (
-    <NavigationContainer>
         <AppStack.Navigator
         screenOptions={
             {cardStyle: {backgroundColor: '#F0F0F5'}}}>
@@ -25,7 +23,6 @@ const Routes = () => {
             <AppStack.Screen name="Manage" component={Manage} options={{headerShown:false}}/>
             <AppStack.Screen name="Update" component={Update} options={{headerShown:false}}/>
         </AppStack.Navigator>
-    </NavigationContainer>
     )
 }
 
