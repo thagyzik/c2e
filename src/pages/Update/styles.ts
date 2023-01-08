@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 24,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     marginTop: 30,
     marginBottom: 15,
     textAlign: "center",
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 16,
     marginTop: 4,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
   },
 
   textInput: {
@@ -31,7 +31,7 @@ export default StyleSheet.create({
     height: 55,
     borderRadius: 8,
     fontSize: 16,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     borderColor: "#092b5a",
     borderWidth: 2,
     paddingLeft: 15,
@@ -64,7 +64,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
 
@@ -73,7 +73,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
 

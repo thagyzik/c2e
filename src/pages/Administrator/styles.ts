@@ -15,7 +15,7 @@ export default StyleSheet.create({
   title: {
     color: "#322153",
     fontSize: 32,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     alignItems: "flex-end",
   },
 
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 18,
     marginTop: 50,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     maxWidth: 260,
     lineHeight: 24,
   },

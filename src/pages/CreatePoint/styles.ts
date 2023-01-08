@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 22,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     marginTop: 25,
     textAlign: "center",
     marginBottom: 20,
@@ -23,7 +23,7 @@ export default StyleSheet.create({
   description: {
     color: "#092b5a",
     fontSize: 16,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     marginBottom: 4,
   },
 
@@ -54,7 +54,7 @@ export default StyleSheet.create({
 
   mapMarkerTitle: {
     flex: 1,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     color: "#FFF",
     fontSize: 13,
     lineHeight: 23,
@@ -86,7 +86,7 @@ export default StyleSheet.create({
   },
 
   itemTitle: {
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     textAlign: "center",
     fontSize: 15,
     marginTop: 3,
@@ -96,7 +96,7 @@ export default StyleSheet.create({
     width: 150,
     color: "#092b5a",
     fontSize: 17,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     paddingEnd: 10,
   },
 
@@ -106,7 +106,7 @@ export default StyleSheet.create({
     borderRadius: 30,
     color: "#092b5a",
     fontSize: 17,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     paddingEnd: 10,
   },
 
@@ -132,7 +132,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
 })

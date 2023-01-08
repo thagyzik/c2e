@@ -42,7 +42,7 @@ export default StyleSheet.create({
   title: {
     color: "#322153",
     fontSize: 28,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     textAlign: "center",
     marginTop: 30,
     flex: 1,
@@ -52,7 +52,7 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 16,
     marginTop: 20,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     textAlign: "center",
     lineHeight: 24,
     marginBottom: 40,
@@ -92,7 +92,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
   buttonTextLink: {
@@ -100,7 +100,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#092b5a",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 16,
   },
   buttonSignUp: {
@@ -119,7 +119,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#092b5a",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
 

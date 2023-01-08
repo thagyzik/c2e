@@ -7,11 +7,13 @@ import CreatePoint from './pages/CreatePoint'
 import Administrator from './pages/Administrator'
 import Manage from './pages/Manage'
 import Update from './pages/Update'
+import { NavigationContainer } from '@react-navigation/native';
 
 const AppStack = createStackNavigator()
 
 const Routes = () => {
     return (
+    <NavigationContainer>
         <AppStack.Navigator
         screenOptions={
             {cardStyle: {backgroundColor: '#F0F0F5'}}}>
@@ -23,6 +25,7 @@ const Routes = () => {
             <AppStack.Screen name="Manage" component={Manage} options={{headerShown:false}}/>
             <AppStack.Screen name="Update" component={Update} options={{headerShown:false}}/>
         </AppStack.Navigator>
+    </NavigationContainer>
     )
 }
 

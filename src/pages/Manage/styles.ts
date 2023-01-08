@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 22,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     marginTop: 50,
     textAlign: "center",
   },
@@ -23,14 +23,14 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 20,
     marginTop: 50,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     textAlign: "center",
   },
   token: {
     color: "#092b5a",
     fontSize: 24,
     marginTop: 50,
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     textAlign: "center",
     marginBottom: 40,
   },
@@ -48,7 +48,7 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
   },
 

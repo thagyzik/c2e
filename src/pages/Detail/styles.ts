@@ -15,7 +15,7 @@ export default StyleSheet.create({
   pointName: {
     color: "#322153",
     fontSize: 28,
-    fontFamily: "Ubuntu_700Bold",
+    fontFamily: "Inter-Black",
     marginTop: 24,
     textAlign: "center",
   },
@@ -23,12 +23,12 @@ export default StyleSheet.create({
   itemsTitle: {
     marginTop: 20,
     color: "#322153",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 20,
   },
 
   pointItems: {
-    fontFamily: "Roboto_400Regular",
+    fontFamily: "Inter-Black",
     fontSize: 18,
     lineHeight: 24,
     marginTop: 8,
@@ -41,7 +41,7 @@ export default StyleSheet.create({
 
   addressTitle: {
     color: "#322153",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 22,
   },
 
@@ -58,7 +58,7 @@ export default StyleSheet.create({
 
   adressContentText: {
     color: "#6C6C80",
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     fontSize: 18,
     marginBottom: 5,
     marginTop: 8,
@@ -108,7 +108,7 @@ export default StyleSheet.create({
     marginLeft: 1,
     color: "#FFF",
     fontSize: 16,
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     paddingLeft: 5,
   },
 
@@ -116,7 +116,7 @@ export default StyleSheet.create({
     marginLeft: 1,
     color: "#FFF",
     fontSize: 16,
-    fontFamily: "Roboto_500Medium",
+    fontFamily: "Inter-Black",
     paddingLeft: 20,
   },
 

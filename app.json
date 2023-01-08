@@ -2,9 +2,9 @@
   "expo": {
     "name": "C2E Coleta",
     "slug": "c2EColeta",
-    "version": "1.0.3",
+    "version": "1.0.7",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./src/assets/logo-projeto.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./src/assets/logo-projeto.png",
@@ -22,9 +22,9 @@
     },
     "android": {
       "package": "com.c2e.coleta",
-      "versionCode": 3,
+      "versionCode": 8,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./src/assets/logo-projeto.png",
         "backgroundColor": "#FFFFFF"
       }
     },
