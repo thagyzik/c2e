@@ -42,7 +42,7 @@ export default StyleSheet.create({
   title: {
     color: "#322153",
     fontSize: 28,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     textAlign: "center",
     marginTop: 30,
     flex: 1,
@@ -52,7 +52,7 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 16,
     marginTop: 20,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     textAlign: "center",
     lineHeight: 24,
     marginBottom: 40,
@@ -92,7 +92,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
   },
   buttonTextLink: {
@@ -100,7 +100,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#092b5a",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 16,
   },
   buttonSignUp: {
@@ -119,11 +119,28 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#092b5a",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
   },
 
   teste: {
     flexDirection: "column",
   },
+
+  textInputDireita: {
+    color: "#092b5a",
+    fontSize: 17,
+    fontFamily: "Inter-SemiBold",
+    paddingEnd: 10,
+  },
+
+  textInputEsquerda: {
+    width: "100%",
+    height: 40,
+    borderRadius: 30,
+    color: "#092b5a",
+    fontSize: 17,
+    fontFamily: "Inter-SemiBold",
+    paddingEnd: 10,
+  }
 })

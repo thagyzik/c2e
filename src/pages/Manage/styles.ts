@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 22,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     marginTop: 50,
     textAlign: "center",
   },
@@ -23,14 +23,14 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 20,
     marginTop: 50,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     textAlign: "center",
   },
   token: {
     color: "#092b5a",
     fontSize: 24,
     marginTop: 50,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     textAlign: "center",
     marginBottom: 40,
   },
@@ -48,7 +48,7 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
   },
 

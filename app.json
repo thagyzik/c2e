@@ -2,7 +2,7 @@
   "expo": {
     "name": "C2E Coleta",
     "slug": "c2EColeta",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "orientation": "portrait",
     "icon": "./src/assets/logo-projeto.png",
     "userInterfaceStyle": "light",
@@ -21,8 +21,9 @@
       "supportsTablet": true
     },
     "android": {
+      
       "package": "com.c2e.coleta",
-      "versionCode": 8,
+      "versionCode": 9,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/logo-projeto.png",
         "backgroundColor": "#FFFFFF"

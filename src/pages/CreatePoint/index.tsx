@@ -19,6 +19,7 @@ import Eletronicos from "../../assets/eletronico.svg"
 import Lampadas from "../../assets/lampada.svg"
 import { RectButton } from "react-native-gesture-handler"
 import Modal from "react-modal"
+import { PROVIDER_GOOGLE } from 'react-native-maps';
 
 interface Item {
   id: number
@@ -278,11 +279,12 @@ const CreatePoint = () => {
 
         <View style={styles.mapContainer}>
             <MapView
+              provider={PROVIDER_GOOGLE}
               scrollEnabled={true}
               style={styles.map}
               initialRegion={{
-                latitude: initialPosition[0],
-                longitude: initialPosition[1],
+                latitude: -25.436979,
+                longitude: -49.268984,
                 latitudeDelta: 0.014,
                 longitudeDelta: 0.014,
               }}

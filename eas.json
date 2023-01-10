@@ -8,15 +8,16 @@
       "distribution": "internal"
     },
     "preview": {
+      "android": {
+        "buildType": "apk"
+      },
       "distribution": "internal"
     },
     "production": {}
   },
   "submit": {
     "production": {
-      "android": {
-        "serviceAccountKeyPath": "C:/dev/c3e/Key/pc-api-6424307102974941246-311-78ba10eacf96.json"
-      }
+      
     }
   }
 }

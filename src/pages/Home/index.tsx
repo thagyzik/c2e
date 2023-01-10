@@ -9,16 +9,11 @@ import {
   Image,
   ScrollView,
 } from "react-native"
-import { Feather as Icon } from "@expo/vector-icons"
-import axios from "axios"
 import { RectButton } from "react-native-gesture-handler"
 import RNPickerSelect from "react-native-picker-select"
 import { useNavigation } from "@react-navigation/native"
 import styles, { pickerSelectStyles } from "./styles"
-
-interface IBGEUFResponse {
-  sigla: string
-}
+import axios from "axios"
 
 interface IBGECityResponse {
   nome: string
@@ -26,21 +21,25 @@ interface IBGECityResponse {
 
 const Home = () => {
   const navigation = useNavigation<any>()
-  const [uf, setUf] = useState<string[]>([])
-  const [city, setCity] = useState<string[]>([])
   const [selectedUf, setSelectedUf] = useState("")
   const [selectedCity, setSelectedCity] = useState("0")
+  const [city, setCity] = useState<string[]>([])
+  const [ufFinal, setUFFinal] = useState("")
+  const [cityFinal, setCityFinal] = useState("0")
+  const estadosArray = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MG", "PA", "PB", "PR", "PE", "RJ", "RN", "RO", "RR", "SC", "SP", "SE", "TO"];
 
-  useEffect(() => {
-    axios
-      .get<IBGEUFResponse[]>(
-        "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
-      )
-      .then((response) => {
-        const siglas = response.data.map((uf) => uf.sigla)
-        setUf(siglas)
+
+  function handleNavigateToPoints() {
+
+    if (estadosArray.includes(selectedUf) && city.includes(selectedCity)) {
+      navigation.navigate("Points", {
+        selectedUf,
+        selectedCity,
       })
-  }, [])
+    } else {
+      Alert.alert("Entrada invalida", "Selecione uma cidade")
+    }
+  }
 
   useEffect(() => {
     if (selectedUf === "0") {
@@ -57,25 +56,23 @@ const Home = () => {
       })
   }, [selectedUf])
 
-  function handleNavigateToPoints() {
-    if (selectedUf && selectedCity) {
-      navigation.navigate("Points", {
-        selectedUf,
-        selectedCity,
-      })
-    } else {
-      Alert.alert("Entrada invalida", "Selecione uma cidade")
-    }
+  function cidade(value: string) {
+    setSelectedCity(value)
+  }
+
+  function estado(value: string) {
+    setSelectedUf(value)
   }
 
   function handleNavigateToCreatePoint() {
-    if (selectedUf && selectedCity) {
+
+    if (estadosArray.includes(selectedUf) && city.includes(selectedCity)) {
       navigation.navigate("CreatePoint", {
         selectedUf,
         selectedCity,
       })
     } else {
-      Alert.alert("Entrada invalida", "Selecione uma cidade")
+      Alert.alert("Entrada invalida", "Verifique o Estado e Cidade")
     }
   }
 
@@ -98,28 +95,18 @@ const Home = () => {
               </Text>
 
               <View style={styles.selectView}>
-                <RNPickerSelect
-                  placeholder={{
-                    label: "Selecione uma UF",
-                    value: null,
-                    color: "#092b5a",
-                  }}
-                  useNativeAndroidPickerStyle={false}
-                  style={pickerSelectStyles}
-                  onValueChange={(uf) => setSelectedUf(uf)}
-                  items={uf.map((uf) => ({ label: uf, value: uf }))}
+                <TextInput
+                  placeholder="Informe o Estado (Formato Exe: PR)"
+                  style={styles.textInputDireita}
+                  onChangeText={(text) => estado(text)}
                 />
-                <RNPickerSelect
-                  placeholder={{
-                    label: "Selecione uma Cidade",
-                    value: null,
-                    color: "#092b5a",
-                  }}
-                  useNativeAndroidPickerStyle={false}
-                  style={pickerSelectStyles}
-                  onValueChange={(city) => setSelectedCity(city)}
-                  items={city.map((city) => ({ label: city, value: city }))}
+
+                <TextInput
+                  placeholder="Informe uma Cidade (Formato Exe: Curitiba)"
+                  style={styles.textInputEsquerda}
+                  onChangeText={(text) => cidade(text)}
                 />
+                
                 <RectButton
                   style={styles.button}
                   onPress={handleNavigateToPoints}

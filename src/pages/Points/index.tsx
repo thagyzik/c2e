@@ -17,6 +17,7 @@ import MapView, { Marker } from 'react-native-maps'
 import Baterias from "../../assets/pilha.svg"
 import Eletronicos from "../../assets/eletronico.svg"
 import Lampadas from "../../assets/lampada.svg"
+import { PROVIDER_GOOGLE } from 'react-native-maps';
 
 interface Points {
   id: number
@@ -112,10 +113,11 @@ const Points = () => {
 
         <View style={styles.mapContainer}>
             <MapView
+              provider={PROVIDER_GOOGLE}
               style={styles.map}
               initialRegion={{
-                latitude: initialPosition[0],
-                longitude: initialPosition[1],
+                latitude: -25.436979,
+                longitude: -49.268984,
                 latitudeDelta: 0.014,
                 longitudeDelta: 0.014,
               }}

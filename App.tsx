@@ -7,7 +7,7 @@ import AppLoading from 'expo-app-loading'
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    'Inter-Black': require('./assets/fonts/Inter-Black.otf'),
+    'Inter-SemiBold': require('./assets/fonts/Inter-SemiBold.otf'),
   });
 
   if(!fontsLoaded){

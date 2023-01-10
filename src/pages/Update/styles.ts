@@ -13,7 +13,7 @@ export default StyleSheet.create({
 
   title: {
     fontSize: 24,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     marginTop: 30,
     marginBottom: 15,
     textAlign: "center",
@@ -23,7 +23,7 @@ export default StyleSheet.create({
     color: "#6C6C80",
     fontSize: 16,
     marginTop: 4,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
   },
 
   textInput: {
@@ -64,7 +64,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
   },
 
@@ -73,7 +73,7 @@ export default StyleSheet.create({
     justifyContent: "center",
     textAlign: "center",
     color: "#FFF",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
   },
 

@@ -15,7 +15,7 @@ export default StyleSheet.create({
   pointName: {
     color: "#322153",
     fontSize: 28,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     marginTop: 24,
     textAlign: "center",
   },
@@ -23,12 +23,12 @@ export default StyleSheet.create({
   itemsTitle: {
     marginTop: 20,
     color: "#322153",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 20,
   },
 
   pointItems: {
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
     lineHeight: 24,
     marginTop: 8,
@@ -41,7 +41,7 @@ export default StyleSheet.create({
 
   addressTitle: {
     color: "#322153",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 22,
   },
 
@@ -58,7 +58,7 @@ export default StyleSheet.create({
 
   adressContentText: {
     color: "#6C6C80",
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     fontSize: 18,
     marginBottom: 5,
     marginTop: 8,
@@ -108,7 +108,7 @@ export default StyleSheet.create({
     marginLeft: 1,
     color: "#FFF",
     fontSize: 16,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     paddingLeft: 5,
   },
 
@@ -116,7 +116,7 @@ export default StyleSheet.create({
     marginLeft: 1,
     color: "#FFF",
     fontSize: 16,
-    fontFamily: "Inter-Black",
+    fontFamily: "Inter-SemiBold",
     paddingLeft: 20,
   },
 
