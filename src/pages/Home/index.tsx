@@ -2,17 +2,15 @@ import React, { useState, useEffect } from "react"
 import {
   View,
   Text,
-  KeyboardAvoidingView,
-  Platform,
   Alert,
   TextInput,
   Image,
   ScrollView,
+  SafeAreaView
 } from "react-native"
 import { RectButton } from "react-native-gesture-handler"
-import RNPickerSelect from "react-native-picker-select"
 import { useNavigation } from "@react-navigation/native"
-import styles, { pickerSelectStyles } from "./styles"
+import styles from "./styles"
 import axios from "axios"
 
 interface IBGECityResponse {
@@ -24,10 +22,7 @@ const Home = () => {
   const [selectedUf, setSelectedUf] = useState("")
   const [selectedCity, setSelectedCity] = useState("0")
   const [city, setCity] = useState<string[]>([])
-  const [ufFinal, setUFFinal] = useState("")
-  const [cityFinal, setCityFinal] = useState("0")
   const estadosArray = ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MS", "MG", "PA", "PB", "PR", "PE", "RJ", "RN", "RO", "RR", "SC", "SP", "SE", "TO"];
-
 
   function handleNavigateToPoints() {
 
@@ -37,7 +32,13 @@ const Home = () => {
         selectedCity,
       })
     } else {
-      Alert.alert("Entrada invalida", "Selecione uma cidade")
+      if(!estadosArray.includes(selectedUf)){
+        Alert.alert("Estado Inválido", "Formato exemplo: PR")
+      } else if (!city.includes(selectedCity)){
+        Alert.alert("Cidade Inválida", "Formato exemplo: Curitiba")
+      } else {
+        Alert.alert("Entrada invalida", "VerifiquAe o Estado e Cidade")
+      }
     }
   }
 
@@ -72,15 +73,18 @@ const Home = () => {
         selectedCity,
       })
     } else {
-      Alert.alert("Entrada invalida", "Verifique o Estado e Cidade")
+      if(!estadosArray.includes(selectedUf)){
+        Alert.alert("Estado Inválido", "Formato exemplo: PR")
+      } else if (!city.includes(selectedCity)){
+        Alert.alert("Cidade Inválida", "Formato exemplo: Curitiba")
+      } else {
+        Alert.alert("Entrada invalida", "VerifiquAe o Estado e Cidade")
+      }
     }
   }
 
   return (
-    <KeyboardAvoidingView
-      style={{ flex: 1 }}
-      behavior={Platform.OS === "ios" ? "padding" : undefined}
-    >
+    <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.main}>
@@ -96,13 +100,13 @@ const Home = () => {
 
               <View style={styles.selectView}>
                 <TextInput
-                  placeholder="Informe o Estado (Formato Exe: PR)"
+                  placeholder="Informe o Estado"
                   style={styles.textInputDireita}
                   onChangeText={(text) => estado(text)}
                 />
 
                 <TextInput
-                  placeholder="Informe uma Cidade (Formato Exe: Curitiba)"
+                  placeholder="Informe uma Cidade"
                   style={styles.textInputEsquerda}
                   onChangeText={(text) => cidade(text)}
                 />
@@ -134,7 +138,7 @@ const Home = () => {
           </View>
         </ScrollView>
       </View>
-    </KeyboardAvoidingView>
+    </SafeAreaView>
   )
 }
 

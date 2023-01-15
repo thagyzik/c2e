@@ -214,7 +214,7 @@ const CreatePoint = () => {
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
         <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon style={styles.iconLogout} name="arrow-left" size={20} />
+          <Icon style={styles.iconLogout} name="arrow-left" size={25} />
         </TouchableOpacity>
 
         <Text style={styles.title}>Cadastre seu ponto de coleta</Text>
@@ -274,7 +274,7 @@ const CreatePoint = () => {
         </ScrollView>
 
         <Text style={styles.description}>
-          Aguarde o mapa ser carregado e selecione o endereço no mapa.
+          Selecione o endereço no mapa.
         </Text>
 
         <View style={styles.mapContainer}>
@@ -347,9 +347,11 @@ const CreatePoint = () => {
             <Text style={styles.itemTitle}>Eletrônicos</Text>
           </TouchableOpacity>
         </ScrollView>
-        <RectButton style={styles.button} onPress={handleSubmit}>
-          <Text style={styles.buttonText}>Cadastrar</Text>
-        </RectButton>
+        <ScrollView>
+          <RectButton style={styles.button} onPress={handleSubmit}>
+            <Text style={styles.buttonText}>Cadastrar</Text>
+          </RectButton>
+        </ScrollView>
       </View>
     </SafeAreaView>
   )

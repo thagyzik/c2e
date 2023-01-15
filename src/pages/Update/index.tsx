@@ -7,9 +7,7 @@ import {
   TouchableOpacity,
   Alert,
   SafeAreaView,
-  ScrollView,
-  TouchableWithoutFeedback,
-  Keyboard,
+  ScrollView
 } from "react-native"
 import { Feather as Icon } from "@expo/vector-icons"
 import { useNavigation, useRoute } from "@react-navigation/native"
@@ -49,21 +47,13 @@ const Update = () => {
   const route = useRoute()
   const routeParams = route.params as Params
   const navigation = useNavigation<any>()
-  const [initialPosition, setInitialPosition] = useState<[number, number]>([
-    0, 0,
-  ])
-  const [uf, setUf] = useState("")
-  const [city, setCity] = useState("")
   const [nome, setNome] = useState("")
   const [email, setEmail] = useState("")
   const [whatsapp, setWhatsApp] = useState("")
   const [rua, setRua] = useState("")
   const [bairro, setBairro] = useState("")
   const [complemento, setComplemento] = useState("")
-  const [selectedItems, setSelectedItems] = useState<number[]>([])
   const [modalIsOpen, setIsOpen] = useState(false)
-  const [items, setItems] = useState<Item[]>([])
-  const [token, setToken] = useState<number>()
   const [data, setData] = useState<Data>({} as Data)
 
   useEffect(() => {

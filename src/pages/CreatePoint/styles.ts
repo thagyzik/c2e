@@ -9,6 +9,7 @@ export default StyleSheet.create({
 
   iconLogout: {
     color: "#092b5a",
+    marginTop: 15,
   },
 
   title: {
@@ -95,7 +96,7 @@ export default StyleSheet.create({
   textInputDireita: {
     width: 150,
     color: "#092b5a",
-    fontSize: 17,
+    fontSize: 15,
     fontFamily: "Inter-SemiBold",
     paddingEnd: 10,
   },
@@ -105,7 +106,7 @@ export default StyleSheet.create({
     height: 40,
     borderRadius: 30,
     color: "#092b5a",
-    fontSize: 17,
+    fontSize: 15,
     fontFamily: "Inter-SemiBold",
     paddingEnd: 10,
   },
